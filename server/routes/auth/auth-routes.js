@@ -8,6 +8,9 @@ const {
 
 const router = express.Router();
 
+app.get('/', (req, res) => {
+  res.redirect('/api/auth/login');
+});
 router.post("/register", registerUser);
 router.post("/login", loginUser);
 router.post("/logout", logoutUser);
